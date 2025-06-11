@@ -1,0 +1,62 @@
+# Node.js
+node_modules/
+**/node_modules/
+.pnp.*
+.pnp/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Next.js
+.next/
+**/.next/
+out/
+build/
+.vercel
+
+# Testing
+coverage/
+
+# Environment
+.env*
+*.pem
+
+# OS and Misc
+.DS_Store
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Python Backend
+venv/
+**/venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+instance/
+**/instance/
+*.sqlite3
+**/*.sqlite3
+uploads/
+media/
+*.log
+
+# Frontend Next.js (redundant but safe)
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Backend Redundant
+backend/venv/
+backend/__pycache__/
+backend/instance/
+backend/*.sqlite3
