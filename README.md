@@ -22,15 +22,3 @@
 - **Backend:** FastAPI, PyTorch, OpenCV
 - **Model:** White-box cartoonization (CVPR 2020)
 
----
-
-## Getting Started
-
-### Backend
-
-```bash
-cd backend
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn inference:app --reload
