@@ -57,8 +57,11 @@ export default function Home() {
       {/* Header */}
       <header className="relative z-10 flex flex-col items-center pt-8 space-y-2">
         <Image src="/artify.png" alt="ArtifyME" width={500} height={300} />
+        <h1 className="text-3xl md:text-4xl font-bold text-center mt-4 text-blue-900">
+          VisiArt – AI-Powered Image Stylizer
+        </h1>
         <p className="text-lg md:text-xl font-semibold text-gray-700 font-alatsi">
-          Turn Your Photos into Fun - Cartoonize with a Click
+          Turn Your Photos into Fun – Cartoonize with a Click
         </p>
       </header>
 
@@ -68,7 +71,10 @@ export default function Home() {
           {/* Upload Area */}
           <label htmlFor="file-upload" className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-lg p-16 mb-8 cursor-pointer bg-[#b0d5ff]/20 hover:bg-[#b0d5ff]/30 transition">
             {previewUrl ? (
-              <img src={previewUrl} alt="Selected Preview" className="w-full h-80 object-cover rounded-lg" />
+              <div className="flex flex-col items-center space-y-2">
+                <p className="text-lg font-medium text-gray-700">Preview of Selected Image</p>
+                <img src={previewUrl} alt="Selected Preview" className="w-full h-80 object-cover rounded-lg" />
+              </div>
             ) : (
               <>
                 <div className="mb-4 text-[#7395f6]">
@@ -102,7 +108,7 @@ export default function Home() {
           <div className="flex justify-center">
             <button
               onClick={handleUpload}
-              disabled={loading}
+              disabled={!selectedFile || loading}
               className="bg-[#b0d5ff] hover:bg-[#7395f6] transition-colors text-black font-bold py-4 px-16 rounded-full text-xl shadow-lg disabled:opacity-50"
             >
               {loading ? 'Processing...' : 'Artify Image 🎨'}
