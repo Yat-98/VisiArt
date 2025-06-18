@@ -134,6 +134,7 @@ model.eval()
 
 def cartoonize_image(img):
     """Apply the cartoonizer model on the image."""
+    
     image = img / 127.5 - 1
     image = image.transpose(2, 0, 1)
     image = torch.from_numpy(image).float().unsqueeze(0)
