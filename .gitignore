@@ -49,6 +49,7 @@ instance/
 uploads/
 media/
 *.log
+backend/weight.pth
 
 # Frontend Next.js (redundant but safe)
 frontend/.next/
